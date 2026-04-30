@@ -44,7 +44,7 @@ function HomePage() {
                 to="/about"
                 className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:bg-[var(--primary-deep)]"
               >
-                Learn more <ArrowRight className="h-4 w-4" />
+                About us <ArrowRight className="h-4 w-4" />
               </Link>
               <a
                 href="mailto:wastekottaas@gmail.com"
