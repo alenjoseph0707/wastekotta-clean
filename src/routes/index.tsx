@@ -88,7 +88,7 @@ function HomePage() {
 
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
-        <div className="overflow-hidden rounded-3xl bg-[var(--gradient-hero)] px-6 py-12 text-center shadow-[var(--shadow-soft)] md:px-12 md:py-16">
+        <div className="overflow-hidden rounded-3xl bg-gradient-hero px-6 py-12 text-center shadow-[var(--shadow-soft)] md:px-12 md:py-16">
           <h2 className="text-2xl font-bold text-primary-foreground md:text-3xl">
             Building a bigger platform — soon.
           </h2>

@@ -30,7 +30,7 @@ function ContactPage() {
         </p>
 
         <div className="mx-auto mt-10 max-w-md rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--gradient-hero)] text-primary-foreground shadow-[var(--shadow-soft)]">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-hero text-primary-foreground shadow-[var(--shadow-soft)]">
             <Mail className="h-7 w-7" />
           </div>
           <p className="mt-5 text-sm font-medium uppercase tracking-wider text-muted-foreground">

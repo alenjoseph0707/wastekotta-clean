@@ -17,7 +17,7 @@ export const Route = createFileRoute("/about")({
 function AboutPage() {
   return (
     <SiteLayout>
-      <section className="border-b border-border/60 bg-[var(--gradient-soft)]">
+      <section className="border-b border-border/60 bg-gradient-soft">
         <div className="mx-auto max-w-6xl px-4 py-16 text-center md:py-20">
           <span className="inline-flex items-center rounded-full border border-primary/30 bg-background px-3 py-1 text-xs font-medium text-primary">
             About Wastekotta
@@ -70,7 +70,7 @@ function AboutPage() {
               key={f.name}
               className="group rounded-2xl border border-border bg-card p-8 text-center shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:border-primary/40"
             >
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[var(--gradient-hero)] text-primary-foreground shadow-[var(--shadow-soft)]">
+              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-hero text-primary-foreground shadow-[var(--shadow-soft)]">
                 <User className="h-9 w-9" />
               </div>
               <h3 className="mt-5 text-xl font-bold">{f.name}</h3>
