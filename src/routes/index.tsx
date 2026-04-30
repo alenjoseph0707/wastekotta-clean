@@ -31,10 +31,7 @@ function HomePage() {
             </span>
             <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Cleaner streets.{" "}
-              <span
-                className="bg-clip-text text-transparent"
-                style={{ backgroundImage: "var(--gradient-hero)" }}
-              >
+              <span className="bg-gradient-hero bg-clip-text text-transparent">
                 Greener tomorrow.
               </span>
             </h1>
