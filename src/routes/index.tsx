@@ -31,7 +31,12 @@ function HomePage() {
             </span>
             <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Cleaner streets.{" "}
-              <span className="bg-[var(--gradient-hero)] bg-clip-text text-transparent">Greener tomorrow.</span>
+              <span
+                className="bg-clip-text text-transparent"
+                style={{ backgroundImage: "var(--gradient-hero)" }}
+              >
+                Greener tomorrow.
+              </span>
             </h1>
             <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
               Wastekotta is on a mission to transform how communities collect, sort and recycle waste —
