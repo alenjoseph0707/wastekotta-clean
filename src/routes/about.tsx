@@ -63,8 +63,16 @@ function AboutPage() {
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {[
-            { name: "Sulfi", role: "Co-Founder" },
-            { name: "Alen", role: "Co-Founder" },
+            {
+              name: "Sulfi",
+              role: "Co-Founder",
+              bio: "Drives strategy and partnerships with a focus on real-world adoption—making sure Wastekotta solves problems operators and citizens face every day.",
+            },
+            {
+              name: "Alen",
+              role: "Co-Founder",
+              bio: "Leads product and technology direction—shipping a dependable experience today while laying the groundwork for the full platform ahead.",
+            },
           ].map((f) => (
             <div
               key={f.name}
@@ -75,6 +83,7 @@ function AboutPage() {
               </div>
               <h3 className="mt-5 text-xl font-bold">{f.name}</h3>
               <p className="mt-1 text-sm font-medium text-primary">{f.role}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{f.bio}</p>
             </div>
           ))}
         </div>
