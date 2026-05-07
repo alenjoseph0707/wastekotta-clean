@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/wastekotta-logo.png";
 
 const TRANSLATIONS = [
   { lang: "ml", text: "കൊട്ട" },
