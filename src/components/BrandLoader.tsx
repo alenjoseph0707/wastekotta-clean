@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from "@/assets/wastekotta-logo.png";
 
 const TRANSLATIONS = [
   { lang: "ml", text: "കൊട്ട" },
@@ -49,23 +50,23 @@ export function BrandLoader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-primary transition-opacity duration-700 ${
+      className={`fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-700 ${
         hide ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
       aria-hidden={hide}
     >
-      {/* Ambient white glow */}
+      {/* Ambient green glow */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/20 blur-3xl animate-pulse" />
+        <div className="absolute left-1/2 top-1/2 h-[60vmin] w-[60vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl animate-pulse" />
         <div
-          className="absolute left-1/2 top-1/2 h-[40vmin] w-[40vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 blur-3xl animate-pulse"
+          className="absolute left-1/2 top-1/2 h-[40vmin] w-[40vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-glow/30 blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         />
         {/* Floating particles */}
         {Array.from({ length: 14 }).map((_, i) => (
           <span
             key={i}
-            className="absolute block h-1.5 w-1.5 rounded-full bg-white/50"
+            className="absolute block h-1.5 w-1.5 rounded-full bg-primary/40"
             style={{
               left: `${(i * 67) % 100}%`,
               top: `${(i * 43) % 100}%`,
@@ -84,16 +85,27 @@ export function BrandLoader() {
       `}</style>
 
       <div className="relative flex flex-col items-center gap-6 px-6 text-center">
+        {/* Logo */}
+        <img
+          src={logo}
+          alt="Wastekotta"
+          className={`h-24 w-24 md:h-28 md:w-28 object-contain transition-all duration-1000 ease-out ${
+            phase === "anticipation"
+              ? "opacity-0 scale-75"
+              : "opacity-100 scale-100 drop-shadow-[0_0_24px_oklch(var(--primary)/0.35)]"
+          }`}
+        />
+
         {/* Wordmark */}
         <div className="flex items-baseline justify-center gap-2 min-h-[3.5rem] md:min-h-[4.5rem]">
           <span
-            className={`text-4xl md:text-6xl font-extrabold tracking-tight lowercase text-white transition-all duration-700 ease-out ${
+            className={`text-4xl md:text-6xl font-extrabold tracking-tight text-primary transition-all duration-700 ease-out ${
               phase === "anticipation" || phase === "logo"
                 ? "opacity-0 translate-y-2"
                 : "opacity-100 translate-y-0"
             }`}
           >
-            waste
+            Waste
           </span>
 
           <span className="relative inline-block min-w-[6ch] text-left">
@@ -102,7 +114,7 @@ export function BrandLoader() {
               TRANSLATIONS.map((t, i) => (
                 <span
                   key={t.lang}
-                  className={`absolute left-0 top-0 text-4xl md:text-6xl font-extrabold tracking-tight text-white/90 transition-all duration-500 ease-out ${
+                  className={`absolute left-0 top-0 text-4xl md:text-6xl font-extrabold tracking-tight text-foreground transition-all duration-500 ease-out ${
                     i === langIdx
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-3 pointer-events-none"
@@ -114,23 +126,23 @@ export function BrandLoader() {
 
             {/* Final brand word */}
             <span
-              className={`text-4xl md:text-6xl font-extrabold tracking-tight lowercase text-white transition-all duration-700 ease-out ${
+              className={`text-4xl md:text-6xl font-extrabold tracking-tight text-foreground transition-all duration-700 ease-out ${
                 phase === "final"
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-3"
               }`}
             >
-              kotta
+              Kotta
             </span>
           </span>
         </div>
 
         <span
-          className={`text-xs lowercase tracking-[0.3em] text-white/80 transition-opacity duration-700 ${
+          className={`text-xs uppercase tracking-[0.3em] text-muted-foreground transition-opacity duration-700 ${
             phase === "final" ? "opacity-100" : "opacity-0"
           }`}
         >
-          smarter waste, greener tomorrow
+          Smarter waste, greener tomorrow
         </span>
       </div>
     </div>
