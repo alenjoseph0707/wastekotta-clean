@@ -83,7 +83,7 @@ function AboutPage() {
                     <Target className="h-7 w-7" />
                   </div>
                   <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                    🌍 Our Mission
+                    Our Mission
                   </h2>
                 </div>
                 <div className="space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -128,7 +128,7 @@ function AboutPage() {
                     <Eye className="h-7 w-7" />
                   </div>
                   <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                    🚀 Our Vision
+                    Our Vision
                   </h2>
                 </div>
                 <div className="space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
