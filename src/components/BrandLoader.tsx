@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/wastekotta-logo.png";
 
 const TRANSLATIONS = [
   { lang: "ml", text: "കൊട്ട" },
@@ -84,28 +83,17 @@ export function BrandLoader() {
         }
       `}</style>
 
-      <div className="relative flex flex-col items-center gap-6 px-6 text-center">
-        {/* Logo */}
-        <img
-          src={logo}
-          alt="Wastekotta"
-          className={`h-24 w-24 md:h-28 md:w-28 object-contain transition-all duration-1000 ease-out ${
-            phase === "anticipation"
-              ? "opacity-0 scale-75"
-              : "opacity-100 scale-100 drop-shadow-[0_0_24px_oklch(var(--primary)/0.35)]"
-          }`}
-        />
-
+      <div className="relative flex flex-col items-center gap-6 px-6 text-center lowercase">
         {/* Wordmark */}
         <div className="flex items-baseline justify-center gap-2 min-h-[3.5rem] md:min-h-[4.5rem]">
           <span
-            className={`text-4xl md:text-6xl font-extrabold tracking-tight text-primary transition-all duration-700 ease-out ${
+            className={`text-4xl md:text-6xl font-extrabold tracking-tight text-black transition-all duration-700 ease-out ${
               phase === "anticipation" || phase === "logo"
                 ? "opacity-0 translate-y-2"
                 : "opacity-100 translate-y-0"
             }`}
           >
-            Waste
+            waste
           </span>
 
           <span className="relative inline-block min-w-[6ch] text-left">
@@ -114,7 +102,7 @@ export function BrandLoader() {
               TRANSLATIONS.map((t, i) => (
                 <span
                   key={t.lang}
-                  className={`absolute left-0 top-0 text-4xl md:text-6xl font-extrabold tracking-tight text-foreground transition-all duration-500 ease-out ${
+                  className={`absolute left-0 top-0 text-4xl md:text-6xl font-extrabold tracking-tight text-primary transition-all duration-500 ease-out ${
                     i === langIdx
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-3 pointer-events-none"
@@ -126,13 +114,13 @@ export function BrandLoader() {
 
             {/* Final brand word */}
             <span
-              className={`text-4xl md:text-6xl font-extrabold tracking-tight text-foreground transition-all duration-700 ease-out ${
+              className={`text-4xl md:text-6xl font-extrabold tracking-tight text-primary transition-all duration-700 ease-out ${
                 phase === "final"
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-3"
               }`}
             >
-              Kotta
+              kotta
             </span>
           </span>
         </div>
@@ -142,7 +130,7 @@ export function BrandLoader() {
             phase === "final" ? "opacity-100" : "opacity-0"
           }`}
         >
-          Smarter waste, greener tomorrow
+          smarter waste, greener tomorrow
         </span>
       </div>
     </div>
